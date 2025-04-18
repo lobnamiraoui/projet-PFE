@@ -1,0 +1,1109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffafc;
+  color: #333;
+  line-height: 1.6;
+}
+/* Applique Montserrat à la barre de navigation */
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff; /* Fond blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 10px 20px;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d63384; /* Couleur de la marque (rose) */
+ 
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: #c2185b; /* Couleur au survol */
+}
+
+.navbar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1818; /* Couleur du texte des liens */
+  margin-left: 15px;
+ 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #c2185b; /* Couleur au survol des liens */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+.navbar .nav-link.active {
+  color: #d63384; /* Couleur active */
+  font-weight: 700;
+}
+
+.navbar img.logo {
+  width: 70px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.navbar-toggler-icon {
+  background-color: #d63384; /* Couleur de l'icône du menu pour mobile */
+}
+
+/* Style pour l'icône du panier */
+.navbar .nav-link.cart-icon {
+  font-size: 2.2rem;
+  color: #d63384;
+}
+
+.navbar .nav-link.cart-icon:hover {
+  color: #c2185b;
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-link {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  padding-top: 90px; /* Ajuste selon la hauteur de ta navbar */
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e91e63;
+}
+
+
+/* Carousel */
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Product Cards */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card .card-body {
+  padding: 1rem;
+  text-align: center;
+
+}
+
+.product-card .product-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.product-card .price {
+  color: #e91e63;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #e91e63;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d81b60;
+}
+
+
+.cart-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff0f5; /* rose clair */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.cart-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #e91e63;
+  margin-bottom: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-item-price {
+  color: #e91e63;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cart-item-quantity input {
+  width: 50px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+}
+
+/* Remove button */
+.btn-remove {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: #ef9a9a;
+}
+
+/* Total & Confirm */
+.cart-total {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #e91e63;
+}
+
+.btn-confirm {
+  display: block;
+  margin: 2rem auto 0;
+  background-color: #e91e63;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-confirm:hover {
+  background-color: #d81b60;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+/* Animation when clicked */
+.product-card.clicked {
+  animation: popOut 0.3s ease;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.contact-container {
+  background-color: #f9f9f9; /* Couleur de fond douce */
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------
+  Titre
+------------------------------------------- */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff7f50, #ff1493);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease forwards;
+
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------
+  Formulaire
+------------------------------------------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+}
+
+.contact-form .form-group:nth-child(1) .form-control {
+  animation-delay: 0.1s;
+}
+.contact-form .form-group:nth-child(2) .form-control {
+  animation-delay: 0.3s;
+}
+.contact-form .form-group:nth-child(3) .form-control {
+  animation-delay: 0.5s;
+}
+
+.contact-form button {
+  background-color: #ff1493;
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #d0207e;
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------
+  Message de succès
+------------------------------------------- */
+.alert-success {
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideInUp 0.6s ease forwards;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.alert-success p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ------------------------------
+  SignIn 
+------------------------------ */
+.signin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f9f9f9;
+ 
+}
+
+.signin-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.signin-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Champs avec animation */
+.signin-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.signin-form .form-control:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+}
+
+/* Delai d’apparition */
+.signin-form .form-group:nth-child(1) .form-control {
+  animation-delay: 0.1s;
+}
+.signin-form .form-group:nth-child(2) .form-control {
+  animation-delay: 0.3s;
+}
+
+/* Bouton */
+.signin-form button {
+  background-color: #ff1493;
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signin-form button:hover {
+  background-color: #d0207e;
+  transform: scale(1.05);
+}
+
+/* Lien vers SignUp */
+.signin-form p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.signin-form a {
+  color: #ff1493;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin-form a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------------------
+  SignUp 
+------------------------------ */
+
+.signin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.signin-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.signin-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Formulaire animé */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+}
+
+/* Animation des champs */
+.contact-form .form-group:nth-child(1) .form-control {
+  animation-delay: 0.1s;
+}
+.contact-form .form-group:nth-child(2) .form-control {
+  animation-delay: 0.3s;
+}
+.contact-form .form-group:nth-child(3) .form-control {
+  animation-delay: 0.5s;
+}
+
+/* Bouton */
+.contact-form button {
+  background-color: #ff1493;
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #d0207e;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*  order */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Si tu veux que tout soit dans une colonne */
+}
+
+/* Conteneur du formulaire */
+.signin-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Largeur maximale du formulaire */
+}
+
+/* Titre principal */
+.signin-form h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #e269a7;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Styles pour les champs du formulaire */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Champ de texte et de sélection */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #dc4ea1;
+  outline: none;
+}
+  
+/* Bouton de soumission */
+button[type="submit"] {
+  background-color: #da1a8a;
+  color: white;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d655a3;
+}
+
+/* Modal de confirmation */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #c8629f;
+  color: white;
+}
+
+.modal-body {
+  font-size: 16px;
+}
+
+button.close {
+  color: #e0158b;
+}
+
+/* Style pour le spinner de chargement */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Lien de retour à la page d'accueil (si besoin) */
+.signin-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signin-link a {
+  color: #e81962;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+/* Cart Container */
+.cart-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+.cart-container h2 {
+  text-align: center;
+  color: #e269a7;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 10px;
+}
+.main-title {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+}
+/* Tableau */
+.table {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #e9d7ec;
+  color: #5e2a5d;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table td,
+.table th {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+/* Images dans le panier */
+.table img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input quantité */
+input[type="number"] {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 6px;
+}
+
+/* Bouton supprimer */
+.btn-delete {
+  background-color: #b70526;
+  border: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #e63956;
+  transform: scale(1.05);
+}
+
+/* Section total et bouton commander */
+.text-end h4 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-end .btn-dark {
+  background-color: #da1a8a;
+  border: none;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.text-end .btn-dark:hover {
+  background-color: #c94d86;
+  transform: scale(1.03);
+}
+/* Style for the main title */
+/* Animation for the main title */
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Style for the main title */
+h1 {
+  font-family: 'Montserrat', sans-serif; /* Typographie Montserrat */
+  font-size: 2.5rem; /* Taille de police */
+  font-weight: bold; /* Gras */
+  color: #e72288; /* Couleur vive */
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 20px; /* Espacement sous le titre */
+  letter-spacing: 2px; /* Espacement des lettres */
+  padding: 30px 50px; /* Ajout de padding horizontal */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Ombre subtile pour le texte */
+  animation: slideIn 1s ease-out; /* Animation d'apparition */
+}
+
+/* Animation for sub-titles */
+@keyframes slideInSub {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Style for sub-titles */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: semi-bold;
+  color: #7d0330; /* Couleur intense */
+  text-align: center; /* Centrer le texte */
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  padding: 50px 50px; /* Ajout de padding horizontal */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère pour améliorer la lisibilité */
+  animation: slideInSub 1s ease-out; /* Animation d'apparition */
+}
+
+/* Footer */
+.footer {
+  background-color: #FFEDFA;
+  padding: 2rem;
+  text-align: center;
+  color: #131212;
+  margin-top: 3rem;
+}
+/* Style des liens dans le footer */
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ae3970;
+  text-decoration: none;
+}
+
+/* Animation pour les icônes sociales */
+.social-icon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Texte du copyright */
+.copyright-text {
+  font-size: 0.9rem;
+  color: #141313;
+}
+/* style page detailproduct */
+.detail-page {
+  padding: 60px 0;
+  background-color: #fdfbfb;
+}
+
+
+
+.detail-page h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+.detail-page p.text-muted {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.detail-page h4.text-danger {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.detail-image {
+  width: 70%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.detail-image:hover {
+  transform: scale(1.03);
+}
+
+
+
+.loby-store {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400; /* Poids léger pour rester fluide et élégant */
+  font-style: normal;
+  color: #ed0a56;  /* Rose doux et féminin */
+  font-size: 25px; /* Taille équilibrée */
+  letter-spacing: 1px; /* Espacement léger */  
+  text-transform: capitalize; /* Majuscules uniquement pour les premières lettres */
+  transition: all 0.3s ease-in-out; /* Transition douce */
+}
+
+.loby-store:hover {
+  color: #f12828; /* Changement de couleur au survol pour un rose plus prononcé */
+  transform: scale(1.1); /* Légère animation de taille au survol */
+}
+
+
+
+h2 {
+  font-size: 3rem;
+  color: #D81B60;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* ANIMATION DU TITRE */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARTE PRODUIT */
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(216, 27, 96, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  background-color: #fff0f5; /* léger fond rose pastel */
+}
+
+/* ANIMATION SURVOL DE LA CARTE */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(216, 27, 96, 0.3);
+}
+
+/* IMAGE */
+.card-img-top {
+
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* TITRE DU PRODUIT */
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #C2185B;
+  text-align: center;
+}
+
+/* PRIX */
+.card-text {
+  color: #141116;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* BOUTON */
+.btn-secondary {
+  background-color: #F06292;
+  border: none;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #EC407A;
+  transform: scale(1.05);
+}
+
+
+/* page about */
+.about-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.embed-map-responsive {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+}
+
+.embed-map-container {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.embed-map-frame {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.team-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.timeline li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.testimonial-card {
+  background-color: #f8f9fa;
+  border-left: 4px solid #ff69b4;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
