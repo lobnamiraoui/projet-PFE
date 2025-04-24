@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel  from '../Components/Carousel';
 import Card from '../Components/Card';
-import DetailProduct from './DetailProduct';
-import Product from './Product';
+import DetailProduct from '../Pages/DetailProduct';
+import Product from '../Pages/Product';
 function Home() {
   return (
     <div className="container mt-5">

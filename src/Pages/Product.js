@@ -4,9 +4,9 @@ import { Link, Links } from "react-router-dom";
 
 function Product() {
   const products = [
-    { id: 1, title: 'Robe élégante', price: '79DT', image: "robe.jpg" },
-    { id: 2, title: 'sac', price: '55DT', image: "./assets/sac1.jpg" },
-    { id: 3, title: 'montres', price: '99DT', image: "./assets/montre2.jpg" },
+    { id: 1, title: 'vétement', price: '79DT', image: "robe.jpg" },
+    { id: 2, title: 'sac', price: '55DT', image: "robe.jpg" },
+    { id: 3, title: 'montres', price: '99DT', image: "robe.jpg" },
   ];
 
   return (
