@@ -261,13 +261,13 @@ body {
 .btn-confirm:hover {
   background-color: #d81b60;
 }
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  justify-items: center;
-}
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+  }
 /* Animation when clicked */
 .product-card.clicked {
   animation: popOut 0.3s ease;
