@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Form, Button, Modal, Spinner, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,16 +8,30 @@ function Order() {
   const [formData, setFormData] = useState({
     name: '',
     address: '',
-    paymentMethod: ''
+    paymentMethod: '',
   });
   const [errors, setErrors] = useState({});
   const [orderConfirmed, setOrderConfirmed] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
+
+  // useEffect pour récupérer les informations du panier
+  useEffect(() => {
+    // Simuler une récupération des données depuis un backend
+    fetch('http://localhost:5000/api/cart') // Remplacer par l'URL de ton backend
+      .then((response) => response.json())
+      .then((data) => {
+        setCartItems(data.items); // suppose que le backend renvoie les items du panier
+      })
+      .catch((error) => {
+        console.error('Erreur lors de la récupération des données du panier:', error);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -37,11 +51,28 @@ function Order() {
       setLoading(true);
       setShowModal(true);
 
-      // Simulation du traitement de la commande avec un délai
-      setTimeout(() => {
-        setLoading(false);
-        setOrderConfirmed(true);
-      }, 2000); // Délai de 2 secondes pour simuler le traitement
+      // Envoi des données de la commande au backend
+      fetch('http://localhost:5000/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user: formData.name,
+          address: formData.address,
+          paymentMethod: formData.paymentMethod,
+          cartItems: cartItems,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setLoading(false);
+          setOrderConfirmed(true);
+        })
+        .catch((error) => {
+          setLoading(false);
+          console.error('Erreur lors de la soumission de la commande:', error);
+        });
     } else {
       setErrors(validationErrors);
     }

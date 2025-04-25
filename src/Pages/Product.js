@@ -6,7 +6,7 @@ function Product() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products/")
+    fetch("http://localhost:5000/api/products/")
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error("Erreur de chargement des produits:", err));
@@ -19,9 +19,9 @@ function Product() {
         {products.map(product => (
           <Col key={product._id} md={4} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={product.image} className="product-image" />
+            <Card.Img variant="top" src={product.imageUrl} className="product-image" />
               <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
+                <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{product.price} DT</Card.Text>
                 <Link to={`/product/${product._id}`}>
                   <Button variant="secondary">Voir détails</Button>
